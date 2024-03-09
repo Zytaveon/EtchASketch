@@ -1,0 +1,42 @@
+*{
+    background-color: grey;
+    margin: 0px;
+    padding: 0px;
+}
+
+.headerContainer{
+    color:white;
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    border-radius: 15px;
+}
+
+.title{
+    border-radius: 15px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    background: white;
+    text-align: center;
+}
+
+#temp{
+    background-color: rgb(102, 102, 179);
+    font-size: large;
+    padding: 5px;
+    border-radius: 15px;
+}
