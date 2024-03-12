@@ -1,26 +1,35 @@
 
 const tryMe = document.getElementById("temp");
-const divList = document.getElementById("divList");
+let divList = document.getElementById("divList");
+
+let desiredBoxes = 5;
+
 
 
 
 
 tryMe.onclick = function(){
 
-    for(let i = 0; i < divList.children.length + 1; ++i){
-       divList.removeChild(divList.children[0]);
-       console.log(divList);
-    }
-    
-    for(let i = 0; i < 3; ++i){
-        let child = document.createElement("div");
-        child.classList.add("box");
-        divList.appendChild(child);
+    let columns = Array.from(document.querySelectorAll(".column"));
+
+    for(let i = 0; i < columns.length; ++i){
+        divList.removeChild(columns[i]);
     }
 
-    //console.log(divList);
+    for(let i = 0; i < desiredBoxes; ++i){
+        let newColumn = document.createElement("div");
+        newColumn.classList = "column";
+        for(let j = 0; j < desiredBoxes; ++j){
+            let newBox = document.createElement("div");
+            newBox.classList = "box";
+            newColumn.append(newBox);
+        }
 
-    
+        divList.append(newColumn);
+    }
 
-    window.alert("we here");
+
+    console.log(divList);
 }
+
+
