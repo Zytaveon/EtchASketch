@@ -2,11 +2,7 @@
 const tryMe = document.getElementById("temp");
 let divList = document.getElementById("divList");
 
-let desiredBoxes = 5;
-
-
-
-
+let desiredBoxes = 19;
 
 tryMe.onclick = function(){
 
@@ -16,12 +12,15 @@ tryMe.onclick = function(){
         divList.removeChild(columns[i]);
     }
 
+    
+
     for(let i = 0; i < desiredBoxes; ++i){
         let newColumn = document.createElement("div");
         newColumn.classList = "column";
         for(let j = 0; j < desiredBoxes; ++j){
             let newBox = document.createElement("div");
             newBox.classList = "box";
+            newBox.addEventListener("mouseover", changeBox);
             newColumn.append(newBox);
         }
 
@@ -31,5 +30,10 @@ tryMe.onclick = function(){
 
     console.log(divList);
 }
+
+function changeBox(event){
+    event.target.classList = "box_visited";
+}
+
 
 

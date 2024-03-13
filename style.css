@@ -18,21 +18,43 @@
     margin-top: 10px;
 }
 
+.root{
+    display: flex;
+    height:60vw;
+    width: 100%;
+    background-color: orange;
+    align-items: center;
+    justify-content: center;
+}
+
 .container{
     display: flex;
-    justify-content: center;
-    align-content: center;
+    background-color: red;
+    /* height: 500px;
+    width: 500px; */
+
+    height: 80%;
+    width: 80%;
+}
+
+.column{
+    display: flex;
+    background-color: blue; 
+    flex: 1;
+    flex-direction: column;
 }
 
 .box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    width: 100px;
-    background: white;
-    text-align: center;
+    background-color: yellow;
+    flex: 1;
+    
 }
+
+.box_visited{
+    background-color: black;
+    flex: 1;
+}
+
 
 #temp{
     background-color: rgb(102, 102, 179);
